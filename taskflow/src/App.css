@@ -1,0 +1,403 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  background: #020617;
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+}
+
+
+.app {
+
+  min-height: 100vh;
+
+  padding: 60px;
+
+  color: white;
+
+  background:
+    radial-gradient(
+      circle at top,
+      #1e40af,
+      transparent 40%
+    ),
+    linear-gradient(
+      120deg,
+      #020617,
+      #0f172a
+    );
+
+}
+
+
+
+.page {
+
+  animation: showPage 0.8s ease;
+
+}
+
+
+
+.page.transition {
+
+  animation: languageChange 0.4s ease;
+
+}
+
+
+
+/* HEADER */
+
+.header {
+
+  max-width: 1200px;
+
+  margin: auto;
+
+  padding: 60px;
+
+  border-radius: 32px;
+
+  background: rgba(255,255,255,0.08);
+
+  border: 1px solid rgba(255,255,255,0.15);
+
+  backdrop-filter: blur(20px);
+
+  box-shadow:
+    0 30px 90px rgba(0,0,0,0.6);
+
+}
+
+
+
+.company {
+
+  font-size: 12px;
+
+  letter-spacing: 6px;
+
+  color: #94a3b8;
+
+}
+
+
+
+h1 {
+
+  margin-top: 25px;
+
+  font-size: 55px;
+
+  font-weight: 900;
+
+  background: linear-gradient(
+    90deg,
+    #ffffff,
+    #38bdf8
+  );
+
+  -webkit-background-clip: text;
+
+  color: transparent;
+
+}
+
+
+
+.subtitle {
+
+  margin-top: 20px;
+
+  font-size: 20px;
+
+  color: #cbd5e1;
+
+}
+
+
+
+/* STATUS */
+
+.status {
+
+  margin-top: 35px;
+
+  display: inline-block;
+
+  padding: 12px 25px;
+
+  border-radius: 50px;
+
+  background: rgba(34,197,94,0.15);
+
+  border: 1px solid #22c55e;
+
+  color: #4ade80;
+
+}
+
+
+
+/* CARDS */
+
+.dashboard {
+
+  max-width: 1200px;
+
+  margin: 50px auto;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit,minmax(280px,1fr));
+
+  gap: 30px;
+
+}
+
+
+
+.card {
+
+  padding: 35px;
+
+  border-radius: 25px;
+
+  background:
+    rgba(255,255,255,0.08);
+
+
+  border:
+    1px solid rgba(255,255,255,0.15);
+
+
+  backdrop-filter: blur(15px);
+
+
+  transition: 0.35s;
+
+
+  animation: cardEnter 0.8s ease;
+
+}
+
+
+
+.card:hover {
+
+  transform: translateY(-10px);
+
+  background:
+    rgba(255,255,255,0.15);
+
+}
+
+
+
+.card span {
+
+  display: block;
+
+  color: #94a3b8;
+
+  font-size: 13px;
+
+  text-transform: uppercase;
+
+  letter-spacing: 2px;
+
+}
+
+
+
+.card strong {
+
+  display: block;
+
+  margin-top: 20px;
+
+  font-size: 32px;
+
+}
+
+
+
+/* IDIOMA */
+
+
+.language-box {
+
+  max-width:1200px;
+
+  margin:auto;
+
+  padding:35px;
+
+  border-radius:25px;
+
+  background:white;
+
+  color:#0f172a;
+
+  display:flex;
+
+  justify-content:space-between;
+
+  align-items:center;
+
+}
+
+
+
+.language-box h3 {
+
+  font-size:20px;
+
+}
+
+
+
+/* BOTÕES */
+
+
+button {
+
+  padding:15px 35px;
+
+  margin-left:15px;
+
+  border:none;
+
+  border-radius:12px;
+
+  background:#0f172a;
+
+  color:white;
+
+  font-weight:700;
+
+  cursor:pointer;
+
+  transition:0.3s;
+
+}
+
+
+
+button:hover {
+
+  background:#2563eb;
+
+  transform:scale(1.08);
+
+  box-shadow:
+    0 10px 30px rgba(37,99,235,0.5);
+
+}
+
+
+
+/* FOOTER */
+
+
+footer {
+
+  margin-top:40px;
+
+  text-align:center;
+
+  color:#64748b;
+
+  font-size:13px;
+
+}
+
+
+
+/* ANIMAÇÕES */
+
+
+@keyframes showPage {
+
+
+  from {
+
+    opacity:0;
+
+    transform:translateY(40px);
+
+  }
+
+
+  to {
+
+    opacity:1;
+
+    transform:translateY(0);
+
+  }
+
+}
+
+
+
+@keyframes languageChange {
+
+
+  0% {
+
+    opacity:1;
+
+    transform:translateX(0);
+
+  }
+
+
+  50% {
+
+    opacity:0;
+
+    transform:translateX(-30px);
+
+  }
+
+
+  100% {
+
+    opacity:1;
+
+    transform:translateX(0);
+
+  }
+
+}
+
+
+
+@keyframes cardEnter {
+
+
+  from {
+
+    opacity:0;
+
+    transform:translateY(50px);
+
+  }
+
+
+  to {
+
+    opacity:1;
+
+    transform:translateY(0);
+
+  }
+
+}
